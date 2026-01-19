@@ -180,31 +180,96 @@
 // - Creates collection from individual items
 // - Rest should be last parameter
 
-function demoRest(email, isAdmin, ...args) {
-  console.log(args[0]); // ?
-}
+// function demoRest(email, isAdmin, ...args) {
+//   console.log(args[0]); // ?
+// }
 
-// demoRest("test@test.com")
-// demoRest("test@test.com", true)
-demoRest("test@test.com", true, 23);
+// // demoRest("test@test.com")
+// // demoRest("test@test.com", true)
+// demoRest("test@test.com", true, 23);
 
 // SPREAD OPERATOR (...)
 // - Spreads the collection into individual items
 
-let marks = [99, 98, 93, 91, 89];
+// let marks = [99, 98, 93, 91, 89];
 
-marks = [85, ...marks];
+// marks = [85, ...marks];
 
-console.log(marks); // [85, [99,98,93,91,89]]
+// console.log(marks); // [85, [99,98,93,91,89]]
 
-let userOne = {
-  name: "Monica",
-  company: "XYZ Inc",
-};
+// let userOne = {
+//   name: "Monica",
+//   company: "XYZ Inc",
+// };
 
-let userTwo = {
-  ...userOne,
-  name: "Ross",
-};
+// let userTwo = {
+//   ...userOne,
+//   name: "Ross",
+// };
 
-console.log(userTwo); // {name : "Ross", company : "XYZ Inc"}
+// console.log(userTwo); // {name : "Ross", company : "XYZ Inc"}
+
+// DESTRUCTURING
+
+// let friends = ["Monica", "Ross", "Rachel", "Joey"];
+
+// let [, , , f4] = friends;
+
+// console.log(f4);
+
+// let userOne = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 23,
+//   email: "john@test",
+// };
+
+// let userTwo = {
+//   firstName: "Monica",
+//   lastName: "Geller",
+// };
+
+// let { lastName: userOneLN, firstName: userOneFN } = userOne;
+// let { firstName: userTwoFN, lastName: userTwoLN } = userTwo;
+
+// console.log(userOneFN, userOneLN);
+// console.log(userTwoFN, userTwoLN);
+
+// let userOne = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 23,
+//   email: "john@test",
+//   address: {
+//     street: "201 Main Road",
+//     city: "Pune",
+//   },
+//   friends: ["Monica", "Ross", "Joey"],
+// };
+
+// let {
+//   firstName,
+//   lastName,
+//   age,
+//   email,
+//   address: { street, city },
+//   friends: [f1, f2, f3],
+// } = userOne;
+
+// console.log(lastName, email, city, street, f2);
+
+let employees = [
+  { email: "monica@test", age: 22 },
+  { email: "ross@test", age: 23 },
+  { email: "joey@test", age: 24 },
+];
+
+let [userOne, userTwo, userThree] = employees;
+let { email: u1Email, age: u1Age } = userOne;
+let { email: u2Email, age: u2Age } = userTwo;
+
+let [
+  { email: userOneEmail, age: userOneAge },
+  { email: userTwoEmail, age: userTwoAge },
+  { email: userThreeEmail, age: userThreeAge },
+] = employees;
