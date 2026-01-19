@@ -1,0 +1,210 @@
+// function longRunningOps() {
+//   setTimeout(function () {
+//     console.log("Running");
+//   }, 1500);
+// }
+
+// function webRequest(req) {
+//   console.log("Start - ", req.reqId);
+//   longRunningOps();
+//   console.log("End - ", req.reqId);
+// }
+
+// webRequest({ reqId: 101 });
+// webRequest({ reqId: 102 });
+
+// OUTPUT
+// - Start - 101
+// - END - 101
+// - Start - 102
+// - End - 102
+// - Running (after 1500 ms)
+// - Running (after 1500 ms)
+
+// let marks = [99, 98, 93, 91, 89];
+// let total = 0;
+
+// Declarative Approach
+// for (var i = 0; i < marks.length; i++) {
+//   total += marks[i];
+// }
+
+// Imperative Approach - Enhanced for loop
+// for (let mark of marks) {
+//     total += mark;
+//  }
+
+// Functional Approach
+// marks.forEach(function (mark) {
+//   total += mark;
+// });
+
+// console.log("Total : ", total);
+
+// var x;
+// x = "Hello World";
+// console.log(typeof x); // string
+
+// x = 101;
+// console.log(typeof x); // number
+
+// x = true;
+// console.log(typeof x);
+
+// let x = 20;
+// let y = "20";
+// console.log(x == y); // 'loose checking'
+// console.log(x === y); // 'strict checking'
+
+// let z = "10";
+
+// console.log(x + z); // 2010
+// console.log(x / z); // 10
+
+// ARROW FUNCTION
+// - No 'arguments' keyword
+// - Can't call with 'new' operator
+// - No more ambigious 'this' reference
+
+// var add = (n1, n2) => n1 + n2;
+
+// console.log("Add : ", add(4, 5));
+
+// var sqrt = (n1) => {
+//   console.log("Number : ", n1);
+//   console.log(arguments);
+//   return n1 ** 2;
+// };
+
+// console.log("Square : ", sqrt(7));
+
+// No 'Arguments'
+// function add() {
+//   console.log(arguments);
+// }
+
+// add(10, 20, 30, 40);
+
+// Constructor Function (ES5)
+// function Student(studId, name) {
+//     this.studId = studId;
+//     this.name = name;
+// }
+
+// var john = new Student("s001", "John Doe")
+
+// var user = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   getFullName: function () {
+//     // var that = this;
+//     // return function () {
+//     //   return that.firstName + " " + that.lastName;
+//     // };
+//     return () => this.firstName + " - " + this.lastName;
+//   },
+// };
+
+// var nestedFunction = user.getFullName(); // ?
+
+// console.log("Full name : ", nestedFunction());
+
+// alert("Hello World")
+
+// // var x = 301;            // Global Scope
+// function a() {
+//   //   var x = 101;          // Outer Scope
+//   function b() {
+//     // var x = 201;         // Local Scope
+//     console.log(x); // ?
+//   }
+//   b();
+// }
+
+// a();
+
+// Lexical Scoping : Physical presence of a function
+
+// function b() {
+// //   var x = 199;
+//   console.log(x);
+// }
+
+// function a() {
+//     var x = 299;
+//   b();
+// }
+
+// a();
+
+// BLOCK SCOPING
+// - let
+// - const
+
+// Variable Hoisting
+// function demoScope(arr) {
+//   if (arr.length > 2) {
+//     let LOAD = "LOADING...";
+//     console.log(FLASH); // undefined
+//   } else {
+//     let FLASH = "FLASHING...";
+//   }
+// }
+
+// demoScope([2, 3, 4, 5]);
+
+// const username = "John Doe";
+// username = "Mary Public";
+
+// const user = {          // xixooo123
+//   name: "John",
+// };
+
+// user.name = "Mary";
+
+// console.log(user.name); // ?
+
+// user = {                // xix000456    ERROR
+//     name : "Monica"
+// }
+
+// const friends = ["Monica", "Ross", "Rachel"];
+
+// friends.push("Joey");
+
+// friends = ["Monica", "Ross", "Rachel", "Joey"]; // ERROR
+
+// console.log(friends.length); // ?
+
+// REST OPERATOR (...)
+// - Creates collection from individual items
+// - Rest should be last parameter
+
+function demoRest(email, isAdmin, ...args) {
+  console.log(args[0]); // ?
+}
+
+// demoRest("test@test.com")
+// demoRest("test@test.com", true)
+demoRest("test@test.com", true, 23);
+
+// SPREAD OPERATOR (...)
+// - Spreads the collection into individual items
+
+let marks = [99, 98, 93, 91, 89];
+
+marks = [85, ...marks];
+
+console.log(marks); // [85, [99,98,93,91,89]]
+
+let userOne = {
+  name: "Monica",
+  company: "XYZ Inc",
+};
+
+let userTwo = {
+  ...userOne,
+  name: "Ross",
+};
+
+console.log(userTwo); // {name : "Ross", company : "XYZ Inc"}
