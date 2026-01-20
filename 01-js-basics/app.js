@@ -258,18 +258,75 @@
 
 // console.log(lastName, email, city, street, f2);
 
-let employees = [
-  { email: "monica@test", age: 22 },
-  { email: "ross@test", age: 23 },
-  { email: "joey@test", age: 24 },
-];
+// let employees = [
+//   { email: "monica@test", age: 22 },
+//   { email: "ross@test", age: 23 },
+//   { email: "joey@test", age: 24 },
+// ];
 
-let [userOne, userTwo, userThree] = employees;
-let { email: u1Email, age: u1Age } = userOne;
-let { email: u2Email, age: u2Age } = userTwo;
+// let [userOne, userTwo, userThree] = employees;
+// let { email: u1Email, age: u1Age } = userOne;
+// let { email: u2Email, age: u2Age } = userTwo;
 
-let [
-  { email: userOneEmail, age: userOneAge },
-  { email: userTwoEmail, age: userTwoAge },
-  { email: userThreeEmail, age: userThreeAge },
-] = employees;
+// let [
+//   { email: userOneEmail, age: userOneAge },
+//   { email: userTwoEmail, age: userTwoAge },
+//   { email: userThreeEmail, age: userThreeAge },
+// ] = employees;
+
+// Closure : process of binding the outer scope variable with nested function
+// function mystry() {
+//   let x = 4;
+
+//   return function () {
+//     return ++x;
+//   };
+// }
+
+// let nestedFn = mystry();
+
+// console.log(nestedFn);
+
+// console.log("X - ", nestedFn()); // 5
+// console.log("X - ", nestedFn()); // 6
+
+// function buildTicket(transport) {
+//   let numOfPassengers = 0;
+
+//   return function (passengerName) {
+//     return (
+//       "Hello " +
+//       passengerName +
+//       "\n" +
+//       "You are going via " +
+//       transport +
+//       "\n" +
+//       "Your Ticket Number is " +
+//       ++numOfPassengers
+//     );
+//   };
+// }
+
+// let shipFn = buildTicket("Ship");
+
+// console.log(shipFn("Monica"));
+// console.log(shipFn("Rachel"));
+
+// let kangrooFn = buildTicket("Kangaroo");
+
+// console.log(kangrooFn("Ross"));
+// console.log(shipFn("Joey"));
+
+// Callbacks
+
+// function greet() {
+//   console.log("Hola");
+// }
+
+// function demoGreet(cb) {
+//   cb();
+// }
+
+// demoGreet(greet);
+
+// setTimeout(() => { }, 1500);

@@ -39,3 +39,21 @@
 
 - Primitive: String, number, boolean, symbol
 - Reference: Date, array, object, function
+
+## Lexical Scope
+
+## ES6 Features
+
+- Arrow Functions
+- Rest/Spread (...)
+- Block Scoping - let, const
+- Destructuring - Object, Array, Nested Destructuring
+
+## Promise Static Methods
+
+> all
+> allSettled
+> race
+> any
+> resolve
+> reject
