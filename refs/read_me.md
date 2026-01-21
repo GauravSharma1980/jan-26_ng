@@ -74,3 +74,47 @@
 - Properties : @Input(), @HostBinding(), @Output()
 - Methods : @HostListener()
 - Parameters : @Skip(), @Optional(), @Host()
+
+## JavaScript Libraries / Frameworks
+
+- AngularJS : v1.x, Library
+- Angular : Router, Services, FormsModule, HttpClient, Directives, Pipes, Components, Templates, Animations, Shadow DOM etc
+
+- React : 35kb Lib, Virtual DOM, Components, quickly and efficiently render the UI, Diffing Algo, Reconciliation Process.
+
+  > SPA: react-router
+  > State Management: Redux
+  > Form Validation: formik, react-form-hook etc
+  > AJAX Calls: jQuery, Axios, Fetch API
+
+- React Native : Mobile Apps, Geolocation, Camera, File System etc
+- Vue\* : Progressive Framework. Emerging. "Evan You"
+- Next : Server-Side Framework for React
+- JQuery : DOM Manipulation, Validations, AJAX, Animations etc
+- Backbone : Lib. Client side MVC Pattern
+- Knockout : MVVM Pattern, 2 way data binding
+- Polymer : Rich Web Components
+- Bootstrap : Pre-built components, CSS Classes, RWD Apps
+- Stencil : VDOM, Component, Web Apps
+- Gatsby
+- Nest
+
+- Express, koa, Hapi, Sails, KrakenJS : Web App Framework, http Server, Socket Server, upload/download server etc
+- Node: A Platform
+
+## Angular CLI Tool (ng)
+
+- latest v21.x (Standalone Component)
+- v17.x (Standalone / Module based Apps)
+
+- npm install @angular/cli@17 -g
+- ng version
+
+- ng new frontend
+- ng new frontend-two --no-standalone --no-routing
+
+- cd frontend
+- npm start
+
+- ng generate component path/to/component
+- ng g c components/users

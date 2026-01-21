@@ -1,1 +1,1 @@
-declare const randomNumber: number;
+declare var randomNumber: number;

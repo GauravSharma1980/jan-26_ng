@@ -3,7 +3,7 @@
 
 // import * as fortune from "./utils/fortune";
 
-// console.log(RANDOM_NUMBER);
+// console.log("Global Vars : ", RANDOM_NUMBER);
 
 // console.log("Your lucky number today is ", getLuckyNumber());
 
