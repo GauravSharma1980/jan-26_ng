@@ -118,3 +118,7 @@
 
 - ng generate component path/to/component
 - ng g c components/users
+
+## Bootstrap Library
+
+> npm install bootstrap
