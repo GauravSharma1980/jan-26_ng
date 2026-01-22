@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { UserImgComponent } from './components/users/user-img/user-img.component';
 import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
+import { DirectivesComponent } from './components/demo/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.comp
     UserInfoComponent,
     UserImgComponent,
     LifeCycleComponent,
+    DirectivesComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module
