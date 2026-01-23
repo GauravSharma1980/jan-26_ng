@@ -1,5 +1,34 @@
 <h1>Pipe Examples</h1>
 
+<h2>Custom Pipe</h2>
+
+<p>Country Code Pipe : {{ 987654321 | countryCode }}</p>
+<!-- <p>Reverse Pipe : {{ "Hello World" | reverse }}</p> -->
+
+<div class="row mb-4">
+  <div class="col-6">
+    <select class="form-control" [(ngModel)]="filteredStatus">
+      <option value="">Filter by Status</option>
+      <option value="completed">Completed</option>
+      <option value="pending">Pending</option>
+    </select>
+  </div>
+</div>
+
+<ul class="list-group">
+  <li
+    class="list-group-item mb-4"
+    *ngFor="let todo of todoCollection | filter: filteredStatus"
+  >
+    <p>
+      {{ todo.label | titlecase }}
+      <span class="float-end">{{ todo.status }}</span>
+    </p>
+  </li>
+</ul>
+
+<hr />
+
 <h2>Built-in Pipes</h2>
 
 <p>UpperCase Pipe : {{ "hello world" | uppercase }}</p>

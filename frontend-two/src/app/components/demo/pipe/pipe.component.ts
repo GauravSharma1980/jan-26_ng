@@ -11,4 +11,13 @@ export class PipeComponent {
     setTimeout(() => resolve('success'), 1500);
   });
   someText = 'HELLO WORLD';
+
+  filteredStatus = '';
+
+  todoCollection = [
+    { label: 'grocery', status: 'completed' },
+    { label: 'shopping', status: 'pending' },
+    { label: 'planting', status: 'completed' },
+    { label: 'insurance', status: 'pending' },
+  ];
 }
