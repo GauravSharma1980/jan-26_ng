@@ -1,5 +1,77 @@
 <h1>Directives Examples</h1>
 
+<h3>Structural Directives</h3>
+
+<h4>*ngSwitch Directive</h4>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <button class="btn btn-link nav-link" (click)="tab = 1">
+      NgFor Example
+    </button>
+  </li>
+  <li class="nav-item">
+    <button class="btn btn-link nav-link" (click)="tab = 2">
+      NgIf Example
+    </button>
+  </li>
+</ul>
+
+<div [ngSwitch]="tab">
+  <div *ngSwitchCase="1">
+    <h4>*ngFor Directive</h4>
+
+    <table class="table">
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Is First ?</th>
+        <th>Is Even ?</th>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let friend of friends;
+            index as i;
+            first as isFirst;
+            last as isLast;
+            even as isEven;
+            odd as isOdd
+          "
+        >
+          <td>{{ i + 1 }}</td>
+          <td [ngClass]="{ 'my-border': isOdd }">{{ friend }}</td>
+          <td>{{ isFirst ? "Yes" : "No" }}</td>
+          <td>{{ isEven ? "Even" : "Odd" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngSwitchCase="2">
+    <h4>*ngIf Directive</h4>
+    <button class="btn btn-primary" (click)="show = !show">Toggle Show</button>
+
+    <p *ngIf="show; else elseTemplate">
+      This content is display when show property is TRUE
+    </p>
+
+    <ng-template #elseTemplate>
+      <p>Show property is FALSE now.</p>
+    </ng-template>
+
+    @if (show) {
+      <p>Using at if; Show property is TRUE.</p>
+    } @else {
+      <p>Using at else, show property if FALSE.</p>
+    }
+  </div>
+  <div *ngSwitchDefault>
+    <p>Please choose any tab to see the example.</p>
+  </div>
+</div>
+
+<hr />
+
 <h3>Attribute Directives</h3>
 
 <h4

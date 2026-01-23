@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './directives.component.css',
 })
 export class DirectivesComponent {
+  show = true;
+
+  friends = ['Monica', 'Ross', 'Rachel', 'Joey'];
+
+  tab = 0;
+
   dynamicStyles = { color: 'blue', 'background-color': 'lightblue' };
 
   dynamicClasses = { feature: false, 'my-border': true };

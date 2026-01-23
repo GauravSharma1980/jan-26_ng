@@ -122,3 +122,22 @@
 ## Bootstrap Library
 
 > npm install bootstrap
+
+## Angular Component
+
+- Reusable
+- Create UI
+- Data Binding
+  > Property Binding
+  > Event Binding
+  > Two way data binding
+- Nested Component Communication
+  > Parent to child (PB + @Input())
+  > Child to parent (EventEmitter + @Output() + EB)
+- Life Cycle
+
+## Angular Directives
+
+- Component Directive
+- Attributes Directive (ngClass, ngStyle)
+- Structural Directive
