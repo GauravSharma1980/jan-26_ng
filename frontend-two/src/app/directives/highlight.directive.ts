@@ -14,6 +14,7 @@ export class HighlightDirective {
   @Input() favColor: string = 'goldenrod';
 
   @HostBinding('style.background-color') bgColor: string = 'transparent';
+  // @HostBinding('style.font-size') fontSize: number = 16;
 
   @HostListener('mouseenter')
   onEnter() {
